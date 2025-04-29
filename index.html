@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ice Cream Packets</title>
+  <style>
+    body {
+      background: #eee;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .icecream-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .icecream {
+      position: relative;
+      width: 180px;
+      height: 400px;
+      cursor: pointer;
+    }
+
+    .packet,
+    .ice {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      transition: opacity 0.5s ease;
+    }
+
+    .packet {
+      z-index: 2;
+    }
+
+    .ice {
+      z-index: 1;
+      opacity: 0;
+    }
+
+    .icecream:hover .packet {
+      opacity: 0;
+    }
+
+    .icecream:hover .ice {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+<div class="icecream-container">
+  <!-- Lime -->
+  <div class="icecream">
+    <img src="limef.png" alt="Lime Packet" class="packet">
+    <img src="lime.png" alt="Lime Ice Cream" class="ice">
+  </div>
+
+  <!-- Pineapple -->
+  <div class="icecream">
+    <img src="Pineapplef.png" alt="Pineapple Packet" class="packet">
+    <img src="Pineapple.png" alt="Pineapple Ice Cream" class="ice">
+  </div>
+
+  <!-- Grape -->
+  <div class="icecream">
+    <img src="grapef.png" alt="Grape Packet" class="packet">
+    <img src="grape.png" alt="Grape Ice Cream" class="ice">
+  </div>
+
+  <!-- Strawberry -->
+  <div class="icecream">
+    <img src="Berryf.png" alt="Strawberry Packet" class="packet">
+    <img src="Berry.png" alt="Strawberry Ice Cream" class="ice">
+  </div>
+</div>
+
+</body>
+</html>
